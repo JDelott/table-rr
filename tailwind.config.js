@@ -5,7 +5,11 @@ export default {
     './src/**/*.tsx',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customYellow: '#a58529',
+      },
+    },
   },
   plugins: [],
 }
