@@ -28,8 +28,10 @@ const Table: React.FC<{ data: MeetingData[]; selectedLocation: string; selectedD
   );
 
   return (
-    <div className="container p-10 max-w-l bg-white rounded-xl shadow-md">
-      <table className="min-w-full divide-y divide-gray-200">
+    <div className="container p-10 max-w-l bg-white rounded-xl shadow-md border border-gray-400">
+     <div className="border border-gray-400">
+      <table className="min-w-full divide-y divide-gray-600 rounded-xl border border-gray-300  ">
+        
         <thead className="bg-gray-50">
           <tr>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time</th>
@@ -40,7 +42,7 @@ const Table: React.FC<{ data: MeetingData[]; selectedLocation: string; selectedD
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
           </tr>
         </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
+        <tbody className="bg-white divide-y divide-gray-900">
           {filteredData.map((item, index) => (
             <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
               <td className="px-6 py-4 whitespace-nowrap">{item.time}</td>
@@ -53,6 +55,7 @@ const Table: React.FC<{ data: MeetingData[]; selectedLocation: string; selectedD
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
@@ -107,7 +110,7 @@ const SearchBar: React.FC<{ onSearch: (searchTerm: string) => void }> = ({ onSea
     </div>
   </div>
   <div className="ml-4">
-    <button className="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+    <button className="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-yellow-800 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
       Search
     </button>
   </div>

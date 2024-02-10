@@ -1,12 +1,15 @@
-import Table from "./table";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Nav from "./nav";
+import Table from './table';
 
-
-const App = () => {
-
+const App: React.FC = () => {
   return (
-    <div >
-      <Table />
-
+    <div>
+      <Nav />
+      <Routes>
+        <Route path="/meetings" element={<Table />} />
+      </Routes>
     </div>
   );
 }
