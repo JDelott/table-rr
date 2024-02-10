@@ -99,28 +99,11 @@ const SearchBar: React.FC<{ onSearch: (searchTerm: string) => void }> = ({ onSea
   <div className="relative flex-grow">
     <input
       type="text"
-      className="block w-full py-2 pl-10 pr-4 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      className="block w-full py-2 pl-4 pr-4 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
       placeholder="Search..."
     />
     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-      <svg
-        className="w-5 h-5 text-gray-400"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          fillRule="evenodd"
-          d="M14.293 13.707a1 1 0 01-1.414 1.414l-3-3a1 1 0 111.414-1.414l3 3a1 1 0 000 1.414z"
-          clipRule="evenodd"
-        />
-        <path
-          fillRule="evenodd"
-          d="M9 17a8 8 0 100-16 8 8 0 000 16zM9 19a10 10 0 100-20 10 10 0 000 20z"
-          clipRule="evenodd"
-        />
-      </svg>
+      
     </div>
   </div>
   <div className="ml-4">
@@ -175,7 +158,6 @@ const App: React.FC = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 px-60">
       <div className="flex justify-between w-full px-10">
       <SearchBar onSearch={(searchTerm) => console.log('Search Term:', searchTerm)} />
-       <div className="flex justify-between  px-10"></div>
         <Dropdown items={locations} onSelect={handleLocationChange} label="Select Location" />
         <Dropdown items={days} onSelect={handleDayChange} label="Select Day" />
         <Dropdown items={timesOfDay} onSelect={handleTimeChange} label="Select Time of Day" />
