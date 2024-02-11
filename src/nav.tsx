@@ -6,7 +6,7 @@ interface NavProps {
 
 const Nav: React.FC<NavProps> = () => {
   return (
-    <nav className="bg-customYellow">
+    <nav className='bg-customYellow'>
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center mx-auto " >

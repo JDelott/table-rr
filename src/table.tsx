@@ -75,7 +75,7 @@ const Dropdown: React.FC<{ items: string[]; onSelect: (selectedItem: string) => 
       <select
         id="dropdown"
         name="dropdown"
-        className="mt-1 block py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        className="mt-1 block py-2 px-3 border border-gray-300 bg-white rounded-md w-full shadow-sm focus:outline-none focus:ring-indigo-500  sm:text-sm"
         value={selectedItem}
         onChange={handleItemChange}
       >
@@ -98,11 +98,11 @@ const SearchBar: React.FC<{ onSearch: (searchTerm: string) => void }> = ({ onSea
   }
 
   return (
-    <div className="relative flex items-center justify-between  px-4">
+    <div className=" mt-2 relative flex items-center justify-between  px-4">
   <div className="relative flex-grow">
     <input
       type="text"
-      className="block w-full py-2 pl-4 pr-4 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      className="block w-full py-2 pl-4 pr-4 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none  sm:text-sm"
       placeholder="Search..."
     />
     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -110,7 +110,7 @@ const SearchBar: React.FC<{ onSearch: (searchTerm: string) => void }> = ({ onSea
     </div>
   </div>
   <div className="ml-4">
-    <button className="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-customYellow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+  <button className="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-customYellow hover:border-gray-500 hover:bg-gray-500 focus:outline-none border-transparent">
       Search
     </button>
   </div>

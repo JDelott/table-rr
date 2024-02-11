@@ -1,4 +1,5 @@
 import React from 'react';
+ 
 
 const SplashPage: React.FC = () => {
   return (
@@ -8,6 +9,9 @@ const SplashPage: React.FC = () => {
         <p className="text-lg">Find support and resources for your recovery journey.</p>
         {/* Add any additional content or features for your splash page */}
       </div>
+      <div>
+      </div>
+
     </div>
   );
 }
